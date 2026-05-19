@@ -36,7 +36,27 @@ This project is a **complete modern redesign** that transformed Corperland into 
 - Mobile-optimized navigation and layouts
 - Touch-friendly interactive elements
 
-## 🛠 Tech Stack
+## 🖼️Before & After
+
+### Design Transformation
+
+| Before                       | After                               |
+| ---------------------------- | ----------------------------------- |
+| Dated, cluttered interface   | Clean, modern aesthetic             |
+| Basic navigation structure   | Intuitive, user-friendly navigation |
+| Static, minimal interactions | Smooth animations and engaging UX   |
+| Limited visual hierarchy     | Clear typography and color system   |
+| Decreased mobile experience  | Fully responsive across all devices |
+
+**Before:** The original Corperland site worked well functionally but felt outdated. Navigation was basic, the visual design lacked personality, and there were minimal interactive elements to engage users.
+
+**After:** The redesigned Corperland features a contemporary, polished interface with smooth animations, improved accessibility, and an engaging user experience that keeps corps members coming back.
+
+| Before                                        | After                                          |
+| --------------------------------------------- | ---------------------------------------------- |
+| ![Original Hero](screenshots/before-hero.png) | ![Redesigned Hero](screenshots/after-hero.png) |
+
+## 🔧 Tech Stack
 
 Built with modern, performant tools for optimal speed and SEO:
 
