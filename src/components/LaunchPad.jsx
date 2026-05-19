@@ -1,7 +1,25 @@
 import "animate.css";
 import { jobs } from "../constants/data";
+import { useEffect, useState } from "react";
 
 const LaunchPad = () => {
+  const [items, setItems] = useState(jobs);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setItems((prev) => {
+        const updated = [...prev];
+
+        const first = updated.shift();
+        updated.push(first);
+
+        return updated;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-32 bg-surface-container-highest">
       <div className="max-w-7xl mx-auto px-8 md:px-16">
@@ -35,10 +53,11 @@ const LaunchPad = () => {
             </button>
           </div>
           <div className="space-y-4">
-            {jobs.map((job) => (
+            {items.map((job, index) => (
               <div
                 key={job.id}
-                className="animate__animated animate__bounceIn bg-surface p-6 rounded-2xl flex justify-between items-center group hover:shadow-md transition-all border border-transparent hover:border-primary/20"
+                className={`${index === jobs.length - 1 ? "animate__bounceIn" : ""}
+                  animate__animated bg-surface p-6 rounded-2xl flex justify-between items-center group hover:shadow-md transition-all border border-transparent hover:border-primary/20`}
               >
                 <div>
                   <h4 className="font-bold text-lg">{job.title}</h4>
